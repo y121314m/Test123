@@ -6,92 +6,92 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 public class Test1 {
 public static void main(String[] args) {
-	JFrame jf=new JFrame("ÕâÊÇÖ÷½çÃæ");//´´½¨´°Ìå,±êÌâÎª:ÕâÊÇÖ÷½çÃæ
-	jf.setLocation(400, 200); //ÉèÖÃÎ»ÖÃ
-	jf.setSize(700, 500); //ÉèÖÃ´óĞ¡
-	jf.setLayout(new FlowLayout());  //ÉèÖÃÁ÷Ê½²¼¾Ö
+	JFrame jf=new JFrame("è¿™æ˜¯ä¸»ç•Œé¢");//åˆ›å»ºçª—ä½“,æ ‡é¢˜ä¸º:è¿™æ˜¯ä¸»ç•Œé¢
+	jf.setLocation(400, 200); //è®¾ç½®ä½ç½®
+	jf.setSize(700, 500); //è®¾ç½®å¤§å°
+	jf.setLayout(new FlowLayout());  //è®¾ç½®æµå¼å¸ƒå±€
 	
-	//»ñµÃÄÚÈİÃæ°å
+	//è·å¾—å†…å®¹é¢æ¿
 	Container cont = jf.getContentPane();
-	//Ìí¼ÓÎÄ±¾
-	JLabel label=new JLabel("ÓÃ»§Ãû:");	
-	JLabel label1 = new JLabel(new ImageIcon("./src/1.PNG"));  //ÉèÖÃ±êÇ©Í¼Æ¬
+	//æ·»åŠ æ–‡æœ¬
+	JLabel label=new JLabel("ç”¨æˆ·å:");	
+	JLabel label1 = new JLabel(new ImageIcon("./src/1.PNG"));  //è®¾ç½®æ ‡ç­¾å›¾ç‰‡
 	cont.add(label);
 	cont.add(label1);
 	
-	//Ìí¼ÓÎÄ±¾¿ò
+	//æ·»åŠ æ–‡æœ¬æ¡†
 	JTextField userN = new JTextField();
 	userN.setText("GUI");
-	System.out.println(userN.getText());    //µÃµ½ÎÄ±¾¿òÖĞµÄÖµ
+	System.out.println(userN.getText());    //å¾—åˆ°æ–‡æœ¬æ¡†ä¸­çš„å€¼
 	cont.add(userN);
 	
-	//Ìí¼ÓÎÄ±¾Óò
+	//æ·»åŠ æ–‡æœ¬åŸŸ
 	JTextArea textArea=new JTextArea(20,20);
-	textArea.setText("Çë×¢ÒâÏÂÃæÊÂÏî:");
-	textArea.append("×îºóÇ¿µ÷:");  //×·¼ÓÎÄ±¾
+	textArea.setText("è¯·æ³¨æ„ä¸‹é¢äº‹é¡¹:");
+	textArea.append("æœ€åå¼ºè°ƒ:");  //è¿½åŠ æ–‡æœ¬
 	cont.add(textArea);
-	
-	//ÉèÖÃ°´Å¥
-	JButton button = new JButton("Ìí¼Ó");
+	System.out.println("yxm");
+	//è®¾ç½®æŒ‰é’®
+	JButton button = new JButton("æ·»åŠ ");
 
 	cont.add(button);
 	
-	//ÉèÖÃ¸´Ñ¡¿ò
-	JCheckBox checkBox = new JCheckBox("Î÷¹Ï",true);
+	//è®¾ç½®å¤é€‰æ¡†
+	JCheckBox checkBox = new JCheckBox("è¥¿ç“œ",true);
 	System.out.println(checkBox.getText());
 	cont.add(checkBox);
 	
-	//ÉèÖÃµ¥Ñ¡°´Å¥
-	JRadioButton radio1 = new JRadioButton("ÄĞ",true);
+	//è®¾ç½®å•é€‰æŒ‰é’®
+	JRadioButton radio1 = new JRadioButton("ç”·",true);
 	cont.add(radio1);
-	JRadioButton radio2 = new JRadioButton("Å®",false);
+	JRadioButton radio2 = new JRadioButton("å¥³",false);
 	cont.add(radio2);
 	
-	//ÉèÖÃµ¥Ñ¡°´Å¥×é
+	//è®¾ç½®å•é€‰æŒ‰é’®ç»„
 	ButtonGroup bg = new ButtonGroup();
 	bg.add(radio1);
 	bg.add(radio2);
 	
-	//ÉèÖÃÏÂÀ­ÁĞ±í
-	String [] items = {"´óÒ»","´ó¶ş","´óÈı"};
+	//è®¾ç½®ä¸‹æ‹‰åˆ—è¡¨
+	String [] items = {"å¤§ä¸€","å¤§äºŒ","å¤§ä¸‰"};
 	JComboBox<String> sel = new JComboBox<String>(items);
-	sel.addItem("´óËÄ");
-	sel.setSelectedIndex(1);  //°´Ë÷ÒıÉèÖÃÄ¬ÈÏÏî
+	sel.addItem("å¤§å››");
+	sel.setSelectedIndex(1);  //æŒ‰ç´¢å¼•è®¾ç½®é»˜è®¤é¡¹
 	System.out.println(sel.getSelectedItem());
 	cont.add(sel);
 	
-	//ÉèÖÃ±í¸ñ
-	//Ã»ÓĞÏÔÊ¾ÁĞÃû	
-	String [] colName = {"Ñ§ºÅ","ĞÕÃû","ĞÔ±ğ","ÄêÁä",}; 
+	//è®¾ç½®è¡¨æ ¼
+	//æ²¡æœ‰æ˜¾ç¤ºåˆ—å	
+	String [] colName = {"å­¦å·","å§“å","æ€§åˆ«","å¹´é¾„",}; 
 	DefaultTableModel dt = new DefaultTableModel(colName,0);
 	
-	dt.addRow(new String[]{"18111111","ÕÅÈı","ÄĞ","15"});
-	dt.addRow(new String[]{"18222222","ÀîËÄ","ÄĞ","19"});
-	dt.addRow(new String[]{"18333333","ÁõÎå","ÄĞ","16"});
-	dt.addRow(new String[]{"18444444","ÕÔÁù","Å®","18"});
+	dt.addRow(new String[]{"18111111","å¼ ä¸‰","ç”·","15"});
+	dt.addRow(new String[]{"18222222","æå››","ç”·","19"});
+	dt.addRow(new String[]{"18333333","åˆ˜äº”","ç”·","16"});
+	dt.addRow(new String[]{"18444444","èµµå…­","å¥³","18"});
 	
 	JTable table = new JTable(dt);
 	table.setRowHeight(60);
 	
-	JScrollPane jp = new JScrollPane(table);   //ÉèÖÃ¹ö¶¯Ãæ°å
-	jp.setPreferredSize(new Dimension(400, 200));  //ÉèÖÃ¹ö¶¯Ãæ°å´óĞ¡
-	jf.add(jp);  //ÔÚ´°ÌåÖĞÌí¼Ó¹ö¶¯Ãæ°å
+	JScrollPane jp = new JScrollPane(table);   //è®¾ç½®æ»šåŠ¨é¢æ¿
+	jp.setPreferredSize(new Dimension(400, 200));  //è®¾ç½®æ»šåŠ¨é¢æ¿å¤§å°
+	jf.add(jp);  //åœ¨çª—ä½“ä¸­æ·»åŠ æ»šåŠ¨é¢æ¿
 	
-	//ÉèÖÃ²Ëµ¥
+	//è®¾ç½®èœå•
 	JMenuBar menuBar = new JMenuBar();
 	jf.setJMenuBar(menuBar);
 	
-	JMenu menu1 = new JMenu("ÎÄ¼ş");  //Ò»¼¶²Ëµ¥
-	JMenu menu2 = new JMenu("¹ÜÀí");
+	JMenu menu1 = new JMenu("æ–‡ä»¶");  //ä¸€çº§èœå•
+	JMenu menu2 = new JMenu("ç®¡ç†");
 	
 	menuBar.add(menu1);
 	menuBar.add(menu2);
 	
-	menu1.add(new JMenuItem("´ò¿ª")); //Ìí¼Ó¶ş¼¶²Ëµ¥
-	menu1.add(new JMenuItem("±£´æ")); //Ìí¼Ó¶ş¼¶²Ëµ¥
+	menu1.add(new JMenuItem("æ‰“å¼€")); //æ·»åŠ äºŒçº§èœå•
+	menu1.add(new JMenuItem("ä¿å­˜")); //æ·»åŠ äºŒçº§èœå•
 	
-	//jf.pack();//×Ô¶¯Æ¥Åä´°Ìå´óĞ¡ ,setSize()·½·¨ÔòÊ§Ğ§
-//jf.setLocationRelativeTo(null);  //ÉèÖÃ´°¿ÚÏà¶ÔÓÚÖ¸¶¨×é¼şµÄÎ»ÖÃ¡£Èç¹û×é¼şµ±Ç°Î´ÏÔÊ¾»òÕß c Îª null£¬Ôò´Ë´°¿Ú½«ÖÃÓÚÆÁÄ»µÄÖĞÑë¡£
+	//jf.pack();//è‡ªåŠ¨åŒ¹é…çª—ä½“å¤§å° ,setSize()æ–¹æ³•åˆ™å¤±æ•ˆ
+//jf.setLocationRelativeTo(null);  //è®¾ç½®çª—å£ç›¸å¯¹äºæŒ‡å®šç»„ä»¶çš„ä½ç½®ã€‚å¦‚æœç»„ä»¶å½“å‰æœªæ˜¾ç¤ºæˆ–è€… c ä¸º nullï¼Œåˆ™æ­¤çª—å£å°†ç½®äºå±å¹•çš„ä¸­å¤®ã€‚
 	
 	jf.setVisible(true);
 	jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
